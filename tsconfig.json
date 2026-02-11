@@ -1,19 +1,29 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.json",
   "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "useDefineForClassFields": true,
+    "jsx": "preserve",
+    "noImplicitThis": true,
+    "strict": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
     "sourceMap": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     },
     "lib": ["esnext", "dom"],
-    "types": ["@dcloudio/types"],
+    "types": ["@dcloudio/types", "miniprogram-api-typings", "@uni-helper/uni-app-types", "sard-uniapp/global"],
     "allowJs": true,
-    "ignoreDeprecations": "5.0"
+    "verbatimModuleSyntax": true
   },
-  "types": ["@dcloudio/types", "miniprogram-api-typings", "@uni-helper/uni-app-types"],
   "vueCompilerOptions": {
-    "nativeTags": ["block", "component", "slot", "template"],
+    "nativeTags": ["block", "component", "slot", "template"]
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "exclude": ["node_modules", "dist"]
