@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import uni from '@dcloudio/vite-plugin-uni'
 import AutoImport from 'unplugin-auto-import/vite'
+import * as path from 'node:path'
 
 // https://vitejs.dev/config/
 export default async () => {
@@ -19,14 +20,15 @@ export default async () => {
           /\.vue$/,
           /\.vue\?vue/, // .vue
         ],
-        imports: [
-          'vue',
-          'uni-app',
-          'pinia',
-        ],
+        imports: ['vue', 'uni-app', 'pinia'],
         dts: 'typings/auto-imports.d.ts',
       }),
     ],
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, 'src'),
+      },
+    },
     css: {
       preprocessorOptions: {
         scss: {

@@ -1,6 +1,6 @@
 {
-    "name" : "",
-    "appid" : "",
+    "name" : "易测控",
+    "appid" : "wxce2cb8ea661432a8",
     "description" : "",
     "versionName" : "1.0.0",
     "versionCode" : "100",
@@ -65,7 +65,7 @@
     "mp-toutiao" : {
         "usingComponents" : true
     },
-    "uniStatistics": {  
+    "uniStatistics": {
         "enable": false
     },
     "vueVersion" : "3"
