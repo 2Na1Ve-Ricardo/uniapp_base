@@ -1,15 +1,16 @@
 <template>
-  <view class="content">
-    <image class="logo" src="/static/logo.png" />
-    <view class="text-area flex flex-col gap-col-2">
-      <text class="title">{{ title }}</text>
-      <sar-button>测试</sar-button>
-    </view>
+  <view class="w-screen h-screen">
+    <base-layout>
+      <template>
+        <text class="title">{{ title }}</text>
+      </template>
+    </base-layout>
   </view>
 </template>
 
 <script setup lang="ts">
   import { ref } from 'vue'
+  import BaseLayout from '@/component/layout/BaseLayOut.vue'
   const title = ref('Hello')
 </script>
 

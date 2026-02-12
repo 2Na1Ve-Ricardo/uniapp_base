@@ -1,6 +1,7 @@
 import * as process from 'node:process'
+import { baseConfig } from '@/config/global'
 
-const BASE_URL = process.env.VITE_APP_API_URL
+const BASE_URL = baseConfig.baseUrl
 const DEFAULT_TIMEOUT = 10000
 
 interface RequestOptions {
